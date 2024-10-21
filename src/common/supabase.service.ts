@@ -8,8 +8,6 @@ export class SupabaseService {
   constructor() {
     const supabaseUrl = process.env.SUPABASE_PROJECT_URL;
     const supabaseKey = process.env.SUPABASE_API_KEY;
-
-    console.log('DATA ', supabaseUrl, supabaseKey);
     this.supabase = createClient(supabaseUrl, supabaseKey);
   }
 
