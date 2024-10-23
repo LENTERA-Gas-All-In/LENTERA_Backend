@@ -5,12 +5,14 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { BusinessModule } from './modules/business/business.module';
+import { EducationModule } from './modules/education/education.module';
 
 @Module({
   imports: [
     UserModule,
     AuthModule,
     BusinessModule,
+    EducationModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '.env',
@@ -19,4 +21,4 @@ import { BusinessModule } from './modules/business/business.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
